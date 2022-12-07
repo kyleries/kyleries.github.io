@@ -3,6 +3,7 @@
 ***
 
 ## Advent of Code, 2022
+12/6/2022
 
 I am participating in the [Advent of Code](https://adventofcode.com/) this year, and I encourage you to do the same! I've chosen the Python scripting language this year. In the past two years, I've attempted the challenges using only SQL which made it....interesting. :smile: The challenges are suited more for a traditional programming language, but attempting to use SQL (via BigQuery) was a helpful mental exercise. It encourages thinking about the problem through a lens of the data, rather than the traditional instinct of developers who may be more inclined to think about "iterators" and "conditionals".
 
