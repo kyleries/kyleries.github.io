@@ -21,5 +21,3 @@ They read best in the order below - oldest period first - which is also the orde
   </li>
 {%- endfor %}
 </ul>
-
-If you'd rather start with a single piece, start with the one on [absorbing acquisitions and retiring a dozen systems](/posts/absorbing-acquisitions-retiring-a-dozen-systems/) - it's the closest thing to a summary of how I work.

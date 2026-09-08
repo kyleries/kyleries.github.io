@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Causal business models, or what to build once the whole business is in one data lake"
-date: 2026-09-08 17:47:13 -0500
+date: 2026-09-08 16:47:13 -0600
 series: field-notes
 period: "2025–2026"
 period_sort: "2025-01-07"
