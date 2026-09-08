@@ -7,8 +7,8 @@ description: >-
   a statewide utility data platform, a public utility, and a youth-sports SaaS.
   Open to Director / Head of Data roles, remote or in Colorado Springs.
 
-# Switch `url` to https://kyleries.com once the custom domain is pointed at GitHub Pages (see APPLY.md).
-url: "https://kyleries.github.io"
+# Canonical host. kyleries.github.io redirects here; keep this in sync with the CNAME file.
+url: "https://kyleries.com"
 baseurl: ""
 
 # minima 2.5.x (what GitHub Pages ships) reads `author` and `email` as plain strings.
