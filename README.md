@@ -1,6 +1,6 @@
 # kyleries.github.io
 
-Source for [kyleries.com](https://kyleries.com) — Kyle Ries's hub for field notes on data and AI leadership work.
+Source for [kyleries.com](https://kyleries.com) - Kyle Ries's hub for field notes on data and AI leadership work.
 
 Built by GitHub Pages with Jekyll and the `minima` theme (2.5.x, the version the `github-pages` gem pins). No build step to run locally unless you want a preview.
 
@@ -8,11 +8,11 @@ Built by GitHub Pages with Jekyll and the `minima` theme (2.5.x, the version the
 
 ```
 _config.yml          site settings, nav order, permalink scheme, analytics token
-index.md             home — intro + latest posts (layout: home)
+index.md             home - intro + latest posts (layout: home)
 field-notes.md       the series index, ordered by period covered (oldest era first)
-work.md              career timeline — the spine that ties posts to eras
+work.md              career timeline - the spine that ties posts to eras
 about.md             long-form About (mirrors the LinkedIn About, expanded)
-now.md               what I'm focused on this month — update monthly
+now.md               what I'm focused on this month - update monthly
 _posts/              one markdown file per post
 _layouts/post.html   minima's post layout + the "Field notes · Period covered · Written" line
 _layouts/home.html   minima's home layout + the period badge in listings
@@ -28,13 +28,13 @@ Create `_posts/YYYY-MM-DD-slug.md`. The slug becomes the URL (`/posts/slug/`). F
 ---
 layout: post
 title: "Title"
-date: 2026-09-08 09:00:00 -0600      # the real publish date — never backdate
+date: 2026-09-08 09:00:00 -0600      # the real publish date - never backdate
 series: field-notes                  # puts it on /field-notes/ and adds the period line
 period: "2023–2024"                  # the era the notes cover (display)
 period_sort: "2023-04"               # sort key for /field-notes/ (oldest era first)
 employer_label: "E Source · NYSERDA IEDR"
 tags: [lineage, data-quality]
-description: "One or two sentences — used for the OG/SEO description and the series index."
+description: "One or two sentences - used for the OG/SEO description and the series index."
 ---
 ```
 
