@@ -1,27 +1,54 @@
-<img alt="Kyle Ries, software and data engineer" src="https://user-images.githubusercontent.com/1095673/206064782-d8f875b2-eafe-45c3-9f20-974fcdc467d6.png">
+# kyleries.github.io
 
-***
+Source for [kyleries.com](https://kyleries.com) — Kyle Ries's hub for field notes on data and AI leadership work.
 
-## Advent of Code, 2022
-12/6/2022
+Built by GitHub Pages with Jekyll and the `minima` theme (2.5.x, the version the `github-pages` gem pins). No build step to run locally unless you want a preview.
 
-I am participating in the [Advent of Code](https://adventofcode.com/) this year, and I encourage you to do the same! I've chosen the Python scripting language this year. In the past two years, I've attempted the challenges using only SQL which made it....interesting. :smile: The challenges are suited more for a traditional programming language, but attempting to use SQL (via BigQuery) was a helpful mental exercise. It encourages thinking about the problem through a lens of the data, rather than the traditional instinct of developers who may be more inclined to think about "iterators" and "conditionals".
+## Layout
 
-As an example, during the 2021 Advent of Code, one particular challenge resulted in a need to multiply down the rows. Historically, multiplying down several thousand rows has not been a particular strong suit of SQL. Certainly, there are ways to manipulate the data in such a way that multiplying the values is possible. However, in attempting this challenge with this tool, I discovered a way to solve it elegantly with a mathematical solution rather than relying on brute force and the CPU.
-
-Inspired by the discussion of Logs and natural logs from the fantastic book [The Joy of *X*](https://www.overdrive.com/media/4872928/the-joy-of-x), it dawned on me that rather than try to force SQL to solve this multiplication problem, I ought to leverage the power of logs (see what I did there) and turn this into a simple addition problem. In doing so, SQL worked marvelously well:
-
-```sql
-select
-  round(
-    exp(
-      sum(
-        ln(total_traveled)
-      )
-    )
-  ) as solve
-from 
-  aggregated
+```
+_config.yml          site settings, nav order, permalink scheme, analytics token
+index.md             home — intro + latest posts (layout: home)
+field-notes.md       the series index, ordered by period covered (oldest era first)
+work.md              career timeline — the spine that ties posts to eras
+about.md             long-form About (mirrors the LinkedIn About, expanded)
+now.md               what I'm focused on this month — update monthly
+_posts/              one markdown file per post
+_layouts/post.html   minima's post layout + the "Field notes · Period covered · Written" line
+_layouts/home.html   minima's home layout + the period badge in listings
+_includes/head.html  minima's head + optional Cloudflare Web Analytics beacon
+assets/main.scss     minima's stylesheet + badge, timeline, and series-list styles
 ```
 
-I think the main takeaway for me is that, at the end of the day, most software engineering challenges are data transformation challenges - how do we move and shape data from where it rests to where it adds value. Having an understanding of the nature of the data, and the ability of pure mathematics to solve problems can be a powerful addition to a toolbox where - perhaps too often - tools such as iteration are often used at the expense of performance and cost.
+## Writing a post
+
+Create `_posts/YYYY-MM-DD-slug.md`. The slug becomes the URL (`/posts/slug/`). Front matter for a field-notes post:
+
+```yaml
+---
+layout: post
+title: "Title"
+date: 2026-09-08 09:00:00 -0600      # the real publish date — never backdate
+series: field-notes                  # puts it on /field-notes/ and adds the period line
+period: "2023–2024"                  # the era the notes cover (display)
+period_sort: "2023-04"               # sort key for /field-notes/ (oldest era first)
+employer_label: "E Source · NYSERDA IEDR"
+tags: [lineage, data-quality]
+description: "One or two sentences — used for the OG/SEO description and the series index."
+---
+```
+
+Put `<!--more-->` after the opening paragraph; everything above it is the excerpt shown on the home page and in the feed.
+
+Ordinary (non-series) posts only need `layout`, `title`, `date`, `tags`, `description`.
+
+## Local preview
+
+```
+bundle install          # uses the Gemfile's github-pages gem set
+bundle exec jekyll serve
+```
+
+## Distribution
+
+kyleries.com is the canonical home. LinkedIn, dev.to and any other copy point back here (canonical URL where the platform supports it, "originally published at kyleries.com" footer otherwise) with a UTM-tagged link so the analytics show which spoke sent the reader.

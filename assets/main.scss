@@ -1,0 +1,87 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough).
+---
+
+@import "minima";
+
+// Period-framing badge used on field-notes posts and listings.
+.field-notes-badge {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border: 1px solid $grey-color-light;
+  border-radius: 999px;
+  font-size: $small-font-size;
+  letter-spacing: 0.02em;
+  color: $grey-color-dark;
+  background: lighten($grey-color-light, 12%);
+}
+
+.field-notes-nav {
+  margin-top: $spacing-unit * 1.5;
+  padding-top: $spacing-unit / 2;
+  border-top: 1px solid $grey-color-light;
+  color: $grey-color-dark;
+  font-size: $small-font-size;
+}
+
+// Timeline on /work/
+.timeline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  > li {
+    position: relative;
+    padding-left: $spacing-unit * 1.25;
+    margin-bottom: $spacing-unit;
+    border-left: 2px solid $grey-color-light;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 0.45em;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $brand-color;
+    }
+  }
+
+  .timeline-era {
+    display: block;
+    font-size: $small-font-size;
+    color: $grey-color;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .timeline-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: $spacing-unit / 4;
+  }
+}
+
+// Series index on /field-notes/
+.series-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+
+  .series-period {
+    font-size: $small-font-size;
+    color: $grey-color;
+  }
+}
+
+// Keep long tables readable on phones.
+.post-content table,
+.page-content table {
+  display: block;
+  overflow-x: auto;
+}

@@ -1,3 +1,64 @@
-theme: jekyll-theme-minimal
+# kyleries.github.io — Jekyll configuration
+# Built by GitHub Pages with the `github-pages` gem (minima 2.5.x, jekyll-feed, jekyll-seo-tag, jekyll-sitemap).
+
 title: Kyle Ries
-description: Thanks for visiting. 
+description: >-
+  Field notes from leading data and AI engineering at a global manufacturer,
+  a statewide utility data platform, a public utility, and a youth-sports SaaS.
+  Open to Director / Head of Data roles, remote or in Colorado Springs.
+
+# Switch `url` to https://kyleries.com once the custom domain is pointed at GitHub Pages (see APPLY.md).
+url: "https://kyleries.github.io"
+baseurl: ""
+
+# minima 2.5.x (what GitHub Pages ships) reads `author` and `email` as plain strings.
+author: Kyle Ries
+email: kyle.ries@gmail.com
+
+# Site-wide social handles used by minima's footer and by jekyll-seo-tag.
+github_username: kyleries
+linkedin_username: kyle-ries-b379a956
+rss: RSS
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+minima:
+  date_format: "%b %-d, %Y"
+
+show_excerpts: true
+permalink: /posts/:title/
+
+# Cloudflare Web Analytics — uncomment and paste the site token to enable the beacon
+# (see _includes/head.html). Leave commented out to emit nothing.
+# cloudflare_analytics_token: "PASTE-TOKEN-HERE"
+
+# Navigation order in the header.
+header_pages:
+  - field-notes.md
+  - work.md
+  - about.md
+  - now.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Kyle Ries
+
+feed:
+  excerpt_only: true
+
+exclude:
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - APPLY.md
+  - node_modules

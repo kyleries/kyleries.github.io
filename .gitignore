@@ -1,0 +1,27 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler — GitHub Pages ignores the lockfile; keeping it out avoids platform mismatch noise
+Gemfile.lock
+vendor/
+.bundle/
+
+# Node (only if a local tooling harness is ever added)
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Private working documents never belong in this public repo
+private/
+private-checks/
+*.private.md
+REVIEW_NOTES.md
+HANDOFF.md
+field_notes_series_plan.md
+APPLY.md
