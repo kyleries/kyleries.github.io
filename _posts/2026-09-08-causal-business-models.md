@@ -12,17 +12,17 @@ description: "A metric tree that breaks the FP&A plan down into the drivers team
 
 Imagine you are handed the annual plan. It has a revenue number in it, a margin number, an operating expense number - the figures that FP&A and the leadership team have agreed the company will deliver. Now imagine you are a supply chain manager, or the sales leader for one region, or the person who runs the loyalty program. Which of those numbers is yours? None of them, exactly. You can't move revenue. You can move the things that move revenue, if somebody would tell you which things those are and by how much.
 
-That gap - between the numbers a company plans in and the levers people actually hold - is the problem I've spent a good share of the last two years on at a 3,500-person global manufacturer. The tool we built for it is something I've taken to calling a causal business model. These are my notes on what it is, why I push back when someone calls it a dashboard, and where the estimates come from.
-
 <!--more-->
 
-## Why a data lake makes this possible at all
+That gap - between the numbers a company plans in and the levers people actually hold - is the problem I've spent a good share of the last two years on at a 3,500-person global manufacturer. The tool we built for it is something I've taken to calling a causal business model. These are my notes on what it is, why I push back when someone calls it a dashboard, and where the estimates come from.
 
-Historically, the answer to "what moves revenue?" came from experience, and experience was hard to check. The evidence simply lived in a dozen systems that did not share keys: orders in one place, program participation in another, pricing in a third, operating spend in a fourth, and each of them with its own idea of who a customer was.
+## The data lake
+
+Historically, the answer to "what moves revenue?" came from experience, and experience was hard to check. The evidence simply lived in separate systems that did not share keys: orders in one place, program participation in another, pricing in a third, operating spend in a fourth, and each of them with its own idea of who a customer was.
 
 The enterprise data lake changed the ground under that problem. Once orders, customers, programs, pricing, inventory and fulfillment, marketing activity, and operating expense sit in one place, with resolved identities and a shared timeline, the relationships between them stop being a matter of opinion. You can actually look. A causal business model is what you build once all of that is joined up.
 
-## The form: a metric tree with two kinds of edges
+## The tree
 
 The model is a tree. At the root sits the number the plan is written in - revenue, say, or gross margin. Each node breaks down into the nodes beneath it, and the breakdown comes in two flavors that I keep very deliberately separate.
 
@@ -36,12 +36,12 @@ The reason to be strict about the two flavors is that they answer different ques
 
 The alignment problem from the opening mostly resolves itself once the tree exists, because every node in the causal layer belongs to a team that can actually push on it. Nobody owns revenue. Somebody does own availability, and somebody owns the loyalty program's tiers, and somebody owns coverage in a region. The tree shows each of them the arithmetic path from their node up to the plan, which turns "hit the number" into "move your driver by this much, and here is how it rolls up." Teams rally around a driver in a way they never rally around a top line, because a driver is something they can do something about - with a project, with a training program, with a technology deployment, with a policy change.
 
-## Three tables and a rollup
+## The tables
 
 Here is where I'd push back when someone calls it "just dashboards", because the artifact is a dataset and the dashboards are windows onto it. Underneath, the model is a handful of governed tables in the lake:
 
 - **The tree itself.** A node table (definition, unit, owner) and an edge table (parent, child, which flavor it is, and for causal edges the effect estimate, its interval, the design that produced it, and an as-of date).
-- **Actuals.** A time series per node, computed from the same governed gold products that feed every other report in the company, so the model and the monthly close cannot disagree about what an order is.
+- **Actuals.** A time series per node, computed from the same governed gold products our other reporting runs on, so the model and the monthly close cannot disagree about what an order is.
 - **Plan.** The FP&A plan decomposed onto the tree. The plan says revenue; the tree asks which drivers are assumed to move, and by how much, to get there.
 - **Expectations.** One record per project: which node it will move, by how much, over what window, at what confidence, at what cost, owned by whom. A pricing change, a training program, a systems deployment, a new loyalty tier - each lands on a driver with a claim attached.
 
@@ -49,7 +49,7 @@ The rollup is where executives get something a dashboard cannot give them. Sum t
 
 And because all of it is built on the lake, it refreshes on the lake's schedule rather than the planning calendar's. Actuals update as the data lands, which means each project's expectation can be checked against what the business actually did - week by week, if the driver moves that fast - instead of waiting for a quarterly review to discover that a promised lift never showed up. The gap between promised and observed becomes a number on the tree, with an owner, while there is still time to do something about it. The tables are versioned with time travel, so "what did we believe in February?" is a question you can answer with a query.
 
-## Where the effect sizes come from
+## Effect sizes
 
 The causal edges need estimates, and there are really only three ways to get one. You can ask an expert, which is fast and, in my experience, optimistic. You can run an experiment, which is the gold standard and is almost never available at the scale of a pricing policy or a company-wide program. Or you can go looking for the experiments the business has already run without meaning to.
 
@@ -61,9 +61,9 @@ The same logic applies to staggered rollouts (compare the region that got the ch
 
 This is where the estimates got better. A project that claims it will lift orders by some amount now gets compared against the last time that driver moved by a similar amount, and what orders did then. Sometimes the claim survives that comparison and sometimes it does not, and either way the estimate now has the business's own history behind it.
 
-## What it changed
+## Results
 
-Planning conversations moved from arguing about the top line to arguing about drivers and evidence. Project intake changed: a proposal names a node, a delta, a window, and a confidence, and a proposal that cannot name a node gets asked what it is for. Post-mortems got a ledger, because expected and observed both live on the tree. The operating-expense side runs on the same tree - the spend application I've written about elsewhere indexes each cost center's dollars to the outcome nodes those dollars are supposed to move.
+The tree gives a planning conversation a place to stand. Instead of arguing about the top line, people can argue about drivers and evidence. A proposal can name a node, a delta, a window, and a confidence, and a proposal that cannot name a node can be asked what it is for. Post-mortems get a ledger, because expected and observed both live on the tree. The operating-expense side uses the same idea: the spend application I've written about elsewhere indexes each cost center's dollars to the outcome measures those dollars are supposed to move.
 
 ## Limits
 
