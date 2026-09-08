@@ -19,7 +19,8 @@ Lead a team of seven data and AI engineers. Built the enterprise data lake on Da
 <a href="/posts/self-service-analytics-through-governed-data-products/">self-service &amp; data products</a> ·
 <a href="/posts/platform-cost-and-compute-governance/">cost &amp; compute governance</a> ·
 <a href="/posts/lean-operations-for-a-data-team/">Lean data ops</a> ·
-<a href="/posts/a-maturity-scorecard-and-the-template-for-responsible-ai/">maturity scorecard → responsible AI</a>
+<a href="/posts/a-maturity-scorecard-and-the-template-for-responsible-ai/">maturity scorecard → responsible AI</a> ·
+<a href="/posts/analytics-that-moved-money/">analytics that moved money</a>
 </li>
 
 <li>

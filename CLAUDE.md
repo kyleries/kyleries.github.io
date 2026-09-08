@@ -6,7 +6,7 @@ This repo is **public**. Everything in it — posts, pages, commit messages, bra
 
 ## Ground rules — read before editing anything
 
-1. **Never backdate.** A post's `date:` is the day it is pushed, or later. The era a post describes goes in `period:` and is displayed as "Period covered". If asked to backdate, decline and explain why: it is detectable (Wayback, feed and sitemap timestamps, git history) and would cost exactly the credibility the site exists to build.
+1. **Never backdate.** A post's `date:` is the day it is pushed, never earlier. Set the time to the actual push time or earlier that day; `future: true` in `_config.yml` keeps a same-day timestamp from being dropped by the UTC build. The era a post describes goes in `period:` and is displayed as "Period covered". If asked to backdate, decline and explain why: it is detectable (Wayback, feed and sitemap timestamps, git history) and would cost exactly the credibility the site exists to build.
 2. **The current employer is never named.** Not in posts, pages, front matter, commit messages, branch names, issues, or this file. The phrase is *a 3,500-person global manufacturer*. Past employers are named where the work was public: E Source / NYSERDA Integrated Energy Data Resource (IEDR), Colorado Springs Utilities, TeamSnap, Deloitte.
 3. **Figures are on a short leash.** Use only numbers already published on this site. A new figure needs Kyle's explicit approval in the conversation before it is written. Prefer ratios and orders of magnitude ("roughly a dozen systems", "six figures a year", "about a tenth of the run-rate"). Never: contract terms, vendor pricing, retired-vendor or acquired-company names, unreleased product or telemetry detail, or security specifics that could be actionable.
 4. **Private working docs live outside this repo** at `~/Documents/Claude/Projects/Career Progression/kyleries-site-2026-09-08/` — `HANDOFF.md` (session state and next steps), `REVIEW_NOTES.md` (every claim in every post, tagged by source), `field_notes_series_plan.md`, and `private-checks/`. **Read `HANDOFF.md` at the start of every session.** Never copy, quote, or summarize those files into this repo or into a commit message.
@@ -54,7 +54,7 @@ description: "One or two sentences — OG/SEO description and the series-index b
 ---
 ```
 
-Put `<!--more-->` after the opening paragraph; everything above it is the excerpt on the home page and in the feed. Ordinary posts need only `layout`, `title`, `date`, `tags`, `description`. Pages use `layout: page` with `permalink:`.
+Put `<!--more-->` after the opening paragraph; everything above it is the excerpt on the home page. The feed carries `description` only. Ordinary posts need only `layout`, `title`, `date`, `tags`, `description`. Pages use `layout: page` with `permalink:`.
 
 The home page lists by `date` descending; the series page sorts by `period_sort` ascending. When adding a post to the series, pick `period_sort` so it lands in the right place in the career arc, and add a link to it from the matching era on `work.md`.
 

@@ -3,19 +3,27 @@
 
 title: Kyle Ries
 description: >-
-  Field notes from leading data and AI engineering at a global manufacturer,
-  a statewide utility data platform, a public utility, and a youth-sports SaaS.
-  Open to Director / Head of Data roles, remote or in Colorado Springs.
+  Field notes on data platform, governance, cost, and leadership work at a global
+  manufacturer, a statewide utility data platform, a public utility, and a
+  youth-sports SaaS. Open to Director / Head of Data roles, remote or in Colorado Springs.
+# Short form used by jekyll-seo-tag for the home page <title>.
+tagline: Field notes on data and AI leadership
 
 # Canonical host. kyleries.github.io redirects here; keep this in sync with the CNAME file.
 url: "https://kyleries.com"
 baseurl: ""
 
+# GitHub Pages builds in UTC; render dates in Mountain time to match the offsets written in every post.
+timezone: America/Denver
+# Publish posts whose date is still in the future at build time. Without this, GitHub Pages silently
+# drops a post pushed before its own timestamp and never rebuilds on a timer.
+future: true
+
 # minima 2.5.x (what GitHub Pages ships) reads `author` and `email` as plain strings.
 author: Kyle Ries
 email: kyle.ries@gmail.com
 
-# Site-wide social handles used by minima's footer and by jekyll-seo-tag.
+# Site-wide social handles used by minima's footer.
 github_username: kyleries
 linkedin_username: kyle-ries-b379a956
 rss: RSS
@@ -25,11 +33,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jemoji
 
 minima:
   date_format: "%b %-d, %Y"
 
 show_excerpts: true
+# Everything above <!--more--> in a post is its excerpt on the home page.
+excerpt_separator: "<!--more-->"
 permalink: /posts/:title/
 
 # Cloudflare Web Analytics — uncomment and paste the site token to enable the beacon
@@ -60,5 +71,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - README.md
-  - APPLY.md
   - node_modules
