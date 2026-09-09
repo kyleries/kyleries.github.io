@@ -9,7 +9,7 @@ Each of the pieces below is a retrospective, written after the work it describes
 
 I name public programs and past employers where the work itself was public. My current employer appears as *a 3,500-person global manufacturer*, and the figures I use there are the ones I've already put on the record elsewhere. Where I haven't put a figure on the record, I use ratios and orders of magnitude.
 
-I'd encourage you to read them in the order below - oldest period first - which is also the order of the [work timeline](/work/).
+I'd encourage you to read them in the order below - oldest period first. The [work timeline](/work/) runs the other way, newest role first.
 
 {% assign notes = site.posts | where: "series", "field-notes" | sort: "period_sort" %}
 <ul class="series-list">
