@@ -23,7 +23,7 @@ This repo is **public**. Everything in it — posts, pages, commit messages, bra
 ```
 _config.yml          site settings, nav order, permalink scheme, analytics token
 index.md             home — intro + latest posts (layout: home)
-field-notes.md       the series index, ordered by period covered (oldest era first)
+field-notes.md       the series index, two lists (finance; foundations), each in reading order
 work.md              career timeline — the spine that ties posts to eras
 about.md             long-form About (mirrors the LinkedIn About, expanded)
 now.md               what Kyle is focused on this month — update monthly, in his words
@@ -47,7 +47,8 @@ title: "Title"
 date: 2026-09-08 09:00:00 -0600      # the real publish date — never earlier than the push
 series: field-notes                  # lists it on /field-notes/ and adds the period line
 period: "2023–2024"                  # the era the notes cover (display)
-period_sort: "2023-04"               # sort key for /field-notes/ (oldest era first)
+period_sort: "03"                    # reading-order key within its spine on /field-notes/
+spine: finance                       # finance | foundations - which list on /field-notes/
 employer_label: "E Source · NYSERDA IEDR"
 tags: [lineage, data-quality]
 description: "One or two sentences — OG/SEO description and the series-index blurb."
@@ -56,7 +57,7 @@ description: "One or two sentences — OG/SEO description and the series-index b
 
 Put `<!--more-->` after the opening paragraph; everything above it is the excerpt on the home page. The feed carries `description` only. Ordinary posts need only `layout`, `title`, `date`, `tags`, `description`. Pages use `layout: page` with `permalink:`.
 
-The home page lists by `date` descending; the series page sorts by `period_sort` ascending. When adding a post to the series, pick `period_sort` so it lands in the right place in the career arc, and add a link to it from the matching era on `work.md`.
+The home page lists by `date` descending; the series page shows two lists by `spine` (finance, then foundations), each sorted by `period_sort` ascending. When adding a post to the series, set `spine` and pick a `period_sort` key that places it in the intended reading order, and add a link to it from the matching era on `work.md`.
 
 ## Build and preview
 

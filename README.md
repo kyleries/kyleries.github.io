@@ -9,7 +9,7 @@ Built by GitHub Pages with Jekyll and the `minima` theme (2.5.x, the version the
 ```
 _config.yml          site settings, nav order, permalink scheme, analytics token
 index.md             home - intro + latest posts (layout: home)
-field-notes.md       the series index, ordered by period covered (oldest era first)
+field-notes.md       the series index, two lists (finance; foundations), each in reading order
 work.md              career timeline - the spine that ties posts to eras
 about.md             long-form About (mirrors the LinkedIn About, expanded)
 now.md               what I'm focused on this month - update monthly
@@ -31,7 +31,8 @@ title: "Title"
 date: 2026-09-08 09:00:00 -0600      # the real publish date - never backdate
 series: field-notes                  # puts it on /field-notes/ and adds the period line
 period: "2023–2024"                  # the era the notes cover (display)
-period_sort: "2023-04"               # sort key for /field-notes/ (oldest era first)
+period_sort: "03"                    # reading-order key within its spine on /field-notes/
+spine: finance                       # finance | foundations - which list on /field-notes/
 employer_label: "E Source · NYSERDA IEDR"
 tags: [lineage, data-quality]
 description: "One or two sentences - used for the OG/SEO description and the series index."

@@ -18,7 +18,7 @@ I lead a team of seven data and AI engineers. My team and I built the enterprise
 <a href="/posts/medallion-architecture-for-a-manufacturer/">medallion &amp; Unity Catalog</a> ·
 <a href="/posts/self-service-analytics-through-governed-data-products/">self-service &amp; data products</a> ·
 <a href="/posts/platform-cost-and-compute-governance/">cost &amp; compute governance</a> ·
-<a href="/posts/lean-operations-for-a-data-team/">Lean data ops</a> ·
+<a href="/posts/finance-grade-reporting-on-the-close-calendar/">finance-grade reporting</a> ·
 <a href="/posts/a-maturity-scorecard-and-the-template-for-responsible-ai/">maturity scorecard and responsible AI</a> ·
 <a href="/posts/analytics-that-moved-money/">analytics that moved money</a> ·
 <a href="/posts/causal-business-models/">causal business models</a>
@@ -29,7 +29,7 @@ I lead a team of seven data and AI engineers. My team and I built the enterprise
 <span class="timeline-title">Lead Data Engineer - E Source, on the NYSERDA Integrated Energy Data Resource (IEDR)</span>
 I was the lead data and domain-integration engineer on a statewide platform that consolidates utility data for New York. I rebuilt lineage across multi-utility submissions and established the data-quality practice. I also identified that the project's single most expensive software line item was doing geospatial work at the wrong grain, and coached the engineering team to a 98% processing improvement worth six figures a year.
 <br><em>Field notes:</em>
-<a href="/posts/lineage-reconstruction-on-a-statewide-utility-data-platform/">lineage reconstruction on a statewide utility platform</a>
+<a href="/posts/lineage-reconstruction-on-a-statewide-utility-data-platform/">lineage and reconciliation as controls</a>
 </li>
 
 <li>
