@@ -4,7 +4,8 @@ title: "Causal business models, or what to build once the whole business is in o
 date: 2026-09-08 16:47:13 -0600
 series: field-notes
 period: "2025–2026"
-period_sort: "2025-01-07"
+period_sort: "01"
+spine: finance
 employer_label: "a 3,500-person global manufacturer"
 tags: [causal-business-models, metric-tree, causal-inference, fp-and-a, planning, natural-experiments, data-products, measurement]
 description: "A metric tree that breaks the FP&A plan down into the drivers teams can actually move, kept as a living dataset rather than a dashboard and refreshed from the data lake often enough to compare what projects promised against what the business actually did - and how the natural experiments hiding in the data made the estimates better."
