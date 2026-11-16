@@ -11,6 +11,6 @@ description: What Kyle Ries is focused on right now - updated monthly.
 
 **Writing.** I'm publishing the [field notes](/field-notes/), eight retrospectives on the platform, governance, cost, and leadership work of the last decade, each labeled with the period it covers. The next posts I have in mind are one on mentoring outcomes and a write-up of the [work timeline](/work/) as a single narrative.
 
-**Looking.** I'm open to Director / Head of Data roles, remote or in Colorado Springs, particularly at a multi-business or acquisitive company whose data estate needs consolidating and governing. If you're hiring for a role like that, [email me](mailto:kyle.ries@gmail.com).
+**Looking.** I'm looking for a senior role leading finance or business analytics, where the job is turning the questions Finance and the business are asking into data products, models, and AI tools, and building the team that maintains them. Remote or in Colorado Springs. If you're hiring for a role like that, [email me](mailto:kyle.ries@gmail.com).
 
 **On my own time.** I'm tinkering with home energy data (EV consumption profiling from interval-meter data) and riding bikes in the Front Range.

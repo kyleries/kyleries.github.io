@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-description: Kyle Ries leads a team of seven data and AI engineers at a global manufacturer. He builds the data platforms and develops the engineers on his team so the business can act on its data. Open to Director / Head of Data roles.
+description: Kyle Ries leads a team of seven data and AI engineers at a global manufacturer. He builds the data platforms and develops the engineers on his team so the business can act on its data. Looking for a senior role leading finance or business analytics.
 ---
 
 I lead a team of seven data and AI engineers at a 3,500-person global manufacturer. We build the platforms that let the business act on its data, and I develop the engineers on the team.
@@ -23,7 +23,7 @@ I speak the language of the manufacturer I serve. Our team's metrics live as a m
 
 ## Next role
 
-I am looking for Director / Head of Data roles, or a VP of Data & Analytics seat at a company that wants its data leader personally engaged in the technical work, remote or in Colorado Springs. I do my best work in a few situations in particular. Perhaps the company is multi-business or acquisitive and needs its data estate consolidated and governed, or its platform bill has grown faster than the value it delivers. Or, perhaps the leadership team wants AI tied to outcomes and governed like any other production system.
+I'm looking for a senior role leading finance or business analytics, where the job is turning the questions Finance and the business are asking into data products, models, and AI tools, and building the team that maintains them. Remote or in Colorado Springs. I do my best work in two situations in particular. One is a Finance organization that wants its planning numbers tied to the drivers people can actually move. The other is a company that wants AI applied to real workflows with the same discipline as any other production system.
 
 ## Credentials
 

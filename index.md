@@ -7,4 +7,4 @@ I lead a team of seven data and AI engineers at a 3,500-person global manufactur
 
 What I write here are **[field notes](/field-notes/)**: retrospectives on the platform, governance, cost, and leadership work from those roles, each labeled with the period it covers. The **[work timeline](/work/)** lists each role and links to the field notes covering that period. The **[about](/about/)** page is the long version of the résumé. The **[now](/now/)** page lists what I'm focused on this month.
 
-I'm open to Director / Head of Data roles, remote or in Colorado Springs. The fastest way to reach me is [email](mailto:kyle.ries@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kyle-ries-b379a956).
+I'm looking for a senior role leading finance or business analytics, where the job is turning the questions Finance and the business are asking into data products, models, and AI tools, and building the team that maintains them. Remote or in Colorado Springs. The fastest way to reach me is [email](mailto:kyle.ries@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kyle-ries-b379a956).
